@@ -1,0 +1,10 @@
+version: 3.8
+
+# Configuration de l'environnement
+runtime: python
+entrypoint: gunicorn -b :$PORT app:app
+
+dependencies:
+  - Flask
+  - azure-cosmos
+  - azure-storage-blob
